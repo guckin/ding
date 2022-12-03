@@ -4,6 +4,7 @@ import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Topic } from 'aws-cdk-lib/aws-sns';
 import {Construct} from 'constructs';
+import * as path from 'path';
 
 
 
@@ -32,8 +33,8 @@ export class InvitesStack extends Stack {
     private readonly invitesCreatedTopic = () => new Topic(this, 'SnsTopic');
 
     private readonly createInviteFunction = () => new NodejsFunction(this, 'InviteHandler', {
-        entry: 'lib/invite-create.ts',
+        entry: path.join(__dirname, 'invite-create.ts'),
         handler: 'inviteCreate',
-        runtime: Runtime.NODEJS_16_X
+        runtime: Runtime.NODEJS_16_X,
     });
 }
