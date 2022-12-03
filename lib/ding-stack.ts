@@ -34,6 +34,7 @@ export class InvitesStack extends Stack {
 
     private readonly invitesCreatedTopic = () => new Topic(this, 'SnsTopic');
 
+
     private readonly createInviteFunction = () => new NodejsFunction(this, 'InviteHandler', {
         entry: path.join(__dirname, 'invite-create.ts'),
         handler: 'inviteCreate',
@@ -43,3 +44,5 @@ export class InvitesStack extends Stack {
           },
     });
 }
+
+console.log('HERE', path.join(__dirname, 'invite-create.ts'))
