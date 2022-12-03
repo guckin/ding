@@ -38,5 +38,8 @@ export class InvitesStack extends Stack {
         entry: path.join(__dirname, 'invite-create.ts'),
         handler: 'inviteCreate',
         runtime: Runtime.NODEJS_16_X,
+        environment: {
+            NODE_OPTIONS: '--enable-source-maps',
+          },
     });
 }
