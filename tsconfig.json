@@ -6,10 +6,11 @@
     "strict": true,
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "sourceMap": true
   },
   "exclude": [
     "node_modules",
     "cdk.out"
-  ]
+  ],
 }
