@@ -32,7 +32,7 @@ export class InvitesStack extends Stack {
     private readonly invitesCreatedTopic = () => new Topic(this, 'SnsTopic');
 
     private readonly createInviteFunction = () => new NodejsFunction(this, 'InviteHandler', {
-        entry: 'src/invite-create.ts',
+        entry: 'lib/invite-create.ts',
         handler: 'inviteCreate',
         runtime: Runtime.NODEJS_16_X
     });
