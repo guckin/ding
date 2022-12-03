@@ -14,6 +14,8 @@ export class DingStack extends Construct {
         new InvitesStack(scope, 'InvitesStack', props);
     }
 }
+
+
 export class InvitesStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
         super(scope, id, props);       
